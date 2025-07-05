@@ -1,5 +1,10 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+}
 .container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 2rem 0; }
 .hero { background: linear-gradient(135deg,#1a1a1a,#333); color: #fff; text-align: center; padding: 6rem 0; }
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
@@ -18,3 +23,71 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
 .testimonials p { margin-bottom: 0.5rem; text-align: center; }
 .footer { background: #1a1a1a; color: #fff; text-align: center; padding: 1rem 0; }
 @media (max-width: 600px) { .hero h1 { font-size: 2rem; } }
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+.hamburger span,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #000;
+  transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+.hamburger::before { top: 0; }
+.hamburger span { top: 10px; }
+.hamburger::after { top: 20px; }
+.hamburger.open::before { transform: rotate(45deg); top: 10px; }
+.hamburger.open span { opacity: 0; }
+.hamburger.open::after { transform: rotate(-45deg); top: 10px; }
+
+@media (max-width: 700px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-links.open { max-height: 300px; }
+  .hamburger { display: block; }
+}
