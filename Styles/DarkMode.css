@@ -1,0 +1,199 @@
+/* --- Dark Mode Styles --- */
+body.dark {
+  background: #15181b;
+  color: #f3f6fa;
+}
+
+body.dark .container,
+body.dark .features-section,
+body.dark .comparison-section,
+body.dark .about-section,
+body.dark .about-joga,
+body.dark .about-story-content,
+body.dark .social-proof-section,
+body.dark .testimonial-card,
+body.dark .feature-card,
+body.dark .how-step,
+body.dark,
+body.dark .social-embed {
+  color: #f3f6fa;
+}
+
+body.dark .features-section,
+body.dark .comparison-section,
+body.dark .social-proof-section {
+  background: linear-gradient(120deg, #1a2330 0%, #181b1f 100%) !important;
+}
+
+body.dark .hero,
+body.dark .how-it-works {
+  background: #181b1f;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18);
+}
+
+body.dark .section-title,
+body.dark .logo-text {
+  color: #f3f6fa;
+}
+
+body.dark .section-subtitle,
+body.dark .feature-desc,
+body.dark .about-section p,
+body.dark .about-story-text p,
+body.dark .hero-subtext,
+body.dark .feature-title,
+body.dark .how-step-desc,
+body.dark .testimonial-card,
+body.dark .footer {
+  color: #b3bed7;
+}
+
+body.dark .comparison-table {
+  background: #181b1f;
+  color: #f3f6fa;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
+}
+
+body.dark .comparison-table th {
+  background: #23262b;
+  color: #f3f6fa;
+}
+
+body.dark .comparison-table td {
+  border-bottom: 1px solid #23262b;
+}
+
+body.dark .comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+body.dark .feature-card,
+body.dark .testimonial-card,
+body.dark .about-section,
+body.dark .about-joga,
+body.dark .about-story-content,
+body.dark .how-step,
+body.dark .social-embed {
+  background: #23262b !important;
+  color: #f3f6fa;
+}
+
+body.dark .feature-icon,
+body.dark .testimonial-author,
+body.dark .how-step-icon,
+body.dark .about-link {
+  color: #4fc3f7;
+}
+
+body.dark .cta-btn {
+  background: linear-gradient(90deg, #1565c0 0%, #00b8d4 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.15);
+}
+
+body.dark .cta-btn::after {
+  background: linear-gradient(90deg, #00b8d4 0%, #1565c0 100%);
+}
+
+body.dark .cta-btn:hover {
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.22);
+}
+
+body.dark .nav-links a {
+  color: #e3eaf7;
+}
+
+body.dark .nav-links a:hover {
+  background: #23262b;
+  color: #4fc3f7;
+}
+
+body.dark .navbar {
+  background: rgba(24, 27, 31, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
+}
+
+body.dark .waitlist-form input[type="email"] {
+  background: #23262b;
+  color: #f3f6fa;
+  border: 1px solid #23262b;
+}
+
+body.dark .waitlist-form input[type="email"]:focus {
+  border: 1.5px solid #4fc3f7;
+}
+
+body.dark .about-link {
+  color: #4fc3f7;
+}
+body.dark .about-link:hover {
+  color: #00b8d4;
+}
+
+body.dark .section-bg-canvas,
+body.dark #hero-bg-canvas {
+  opacity: 0.3;
+}
+
+body.dark .footer {
+  color: #7a8599;
+  border-top: 1px solid #23262b;
+}
+
+/* --- Dark Mode Toggle Button --- */
+.dark-toggle-btn {
+  background: linear-gradient(90deg, #23262b 0%, #181b1f 100%);
+  color: #4fc3f7;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
+  transition: background 0.3s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-toggle-btn:hover,
+.dark-toggle-btn:focus {
+  background: linear-gradient(90deg, #181b1f 0%, #23262b 100%);
+  color: #00b8d4;
+  box-shadow: 0 4px 16px rgba(30, 144, 255, 0.14);
+}
+/* Hamburger Button - Dark Mode */
+body.dark .nav-toggle .bar {
+  background: #e3eaf7;
+}
+
+body.dark .nav-toggle {
+  background: none;
+}
+
+body.dark .nav-toggle.open .bar {
+  background: #4fc3f7;
+}
+
+/* Responsive Navbar - Dark Mode */
+body.dark .nav-links {
+  background: rgba(24, 27, 31, 0.97);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+}
+
+body.dark .nav-links a {
+  color: #e3eaf7;
+}
+
+body.dark .nav-links a:hover {
+  background: #23262b;
+  color: #4fc3f7;
+}
+
+body.dark .nav-cta {
+  background: #23262b;
+  color: #4fc3f7;
+}
