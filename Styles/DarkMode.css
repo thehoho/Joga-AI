@@ -1,0 +1,265 @@
+/* Dark mode variables */
+body.dark {
+  --bg: #101217;
+  --text: #e6eaf3;
+  --text-secondary: #8fa1c7;
+  --primary: #00e676; /* neon green for sleek effect */
+  --secondary: #ffe066;
+  --accent: #40c4ff; /* neon blue accent */
+  --surface: #181b22;
+  --surface-alt: #23283a;
+  --border: #23283a;
+  --shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.28);
+}
+
+/* --- Sleek Dark Mode Styles --- */
+body.dark {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .container,
+body.dark .features-section,
+body.dark .comparison-section,
+body.dark .about-section,
+body.dark .about-joga,
+body.dark .about-story-content,
+body.dark .social-proof-section,
+body.dark .testimonial-card,
+body.dark .feature-card,
+body.dark .how-step,
+body.dark,
+body.dark .social-embed {
+  color: var(--text);
+  border-radius: 1rem;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+body.dark .features-section,
+body.dark .comparison-section,
+body.dark .social-proof-section {
+  background: linear-gradient(120deg, #181b22 0%, #101217 100%) !important;
+}
+
+body.dark .hero,
+body.dark .how-it-works {
+  background: var(--surface-alt);
+  box-shadow: var(--shadow);
+}
+
+body.dark .section-title,
+body.dark .logo-text {
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 16px rgba(0, 230, 118, 0.08);
+}
+
+body.dark .section-subtitle,
+body.dark .feature-desc,
+body.dark .about-section p,
+body.dark .about-story-text p,
+body.dark .hero-subtext,
+body.dark .feature-title,
+body.dark .how-step-desc,
+body.dark .testimonial-card,
+body.dark .footer {
+  color: var(--text-secondary);
+}
+
+body.dark .comparison-table {
+  background: var(--surface-alt);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  border-radius: 0.75rem;
+}
+
+body.dark .comparison-table th {
+  background: var(--surface);
+  color: var(--primary);
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark .comparison-table td {
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark .comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+body.dark .feature-card,
+body.dark .testimonial-card,
+body.dark .about-section,
+body.dark .about-joga,
+body.dark .about-story-content,
+body.dark .how-step,
+body.dark .social-embed {
+  background: var(--surface-alt) !important;
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+body.dark .feature-icon,
+body.dark .testimonial-author,
+body.dark .how-step-icon,
+body.dark .about-link {
+  color: var(--accent);
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+body.dark .cta-btn {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(64, 196, 255, 0.18);
+  border-radius: 2rem;
+  border: none;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.dark .cta-btn::after {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+body.dark .cta-btn:hover {
+  box-shadow: 0 4px 24px rgba(0, 230, 118, 0.22);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+body.dark .nav-links a {
+  color: var(--text);
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+body.dark .nav-links a:hover {
+  background: var(--surface);
+  color: var(--accent);
+}
+
+body.dark .navbar {
+  background: rgba(24, 27, 34, 0.92);
+  backdrop-filter: blur(18px) saturate(200%);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
+}
+
+body.dark .waitlist-form input[type="email"] {
+  background: var(--surface);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 0.5rem;
+  transition: border 0.2s;
+}
+
+body.dark .waitlist-form input[type="email"]:focus {
+  border: 1.5px solid var(--accent);
+  outline: none;
+}
+
+body.dark .about-link {
+  color: var(--accent);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+body.dark .about-link:hover {
+  color: var(--primary);
+}
+
+body.dark .section-bg-canvas,
+body.dark #hero-bg-canvas {
+  opacity: 0.18;
+}
+
+body.dark .footer {
+  color: #7a8599;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+/* --- Dark Mode Toggle Button --- */
+.dark-toggle-btn {
+  background: linear-gradient(
+    90deg,
+    var(--surface) 0%,
+    var(--surface-alt) 100%
+  );
+  color: var(--accent);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(64, 196, 255, 0.1);
+  transition: background 0.3s, color 0.2s, box-shadow 0.2s;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-toggle-btn:hover,
+.dark-toggle-btn:focus {
+  background: linear-gradient(
+    90deg,
+    var(--surface-alt) 0%,
+    var(--surface) 100%
+  );
+  color: var(--primary);
+  box-shadow: 0 4px 16px rgba(0, 230, 118, 0.14);
+}
+
+/* Hamburger Button - Dark Mode */
+body.dark .nav-toggle .bar {
+  background: var(--text);
+}
+
+body.dark .nav-toggle {
+  background: none;
+}
+
+body.dark .nav-toggle.open .bar {
+  background: var(--accent);
+}
+
+/* Responsive Navbar - Dark Mode */
+body.dark .nav-links {
+  background: rgba(24, 27, 34, 0.98);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.22);
+}
+
+body.dark .nav-links a {
+  color: var(--text);
+}
+
+body.dark .nav-links a:hover {
+  background: var(--surface);
+  color: var(--accent);
+}
+
+body.dark .nav-cta {
+  background: var(--surface);
+  border-radius: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(64, 196, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+body.dark .logo {
+  filter: drop-shadow(0 0 8px var(--primary))
+    drop-shadow(0 0 16px var(--accent));
+  transition: filter 0.3s;
+  animation: logo-pulse 1.6s infinite alternate;
+}
+
+@keyframes logo-pulse {
+  0% {
+    filter: drop-shadow(0 0 8px var(--primary))
+      drop-shadow(0 0 16px var(--accent));
+  }
+  100% {
+    filter: drop-shadow(0 0 10px var(--primary))
+      drop-shadow(0 0 20px var(--accent));
+  }
+}

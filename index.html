@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Joga AI – Your AI Coach is Here</title>
+    <meta
+      name="description"
+      content="Joga AI is your personal soccer coach powered by AI. Upload game clips, get feedback, and improve your skills with insights that used to be reserved for the pros."
+    />
+    <meta
+      name="keywords"
+      content="soccer, AI coach, football analysis, youth soccer, performance feedback"
+    />
+    <meta name="author" content="Joga AI Team" />
+    <link rel="icon" href="./images/football - Copy.png" type="image/png" />
+    <link rel="stylesheet" href="Styles/Main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="Styles/Nav.css" />
+    <link rel="stylesheet" href="Styles/DarkMode.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sticky Glassy Navbar -->
+    <nav class="navbar">
+      <div class="container nav-content">
+        <div class="logo">
+          <span
+            ><img
+              src="./images/football.png"
+              alt="Joga AI Logo"
+              class="logo"
+              style="width: 72px; vertical-align: middle; height: 72px"
+          /></span>
+          <span class="logo-text" style="font-size: 14px">Joga AI</span>
+        </div>
+        <button
+          class="nav-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#social">Social</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#waitlist">Waitlist</a></li>
+        </ul>
+        <a href="#waitlist" class="cta-btn nav-cta">Join Beta</a>
+        <!-- Add inside your navbar or anywhere you want -->
+        <button
+          id="darkModeToggle"
+          aria-label="Toggle dark mode"
+          class="dark-toggle-btn"
+        >
+          🌙
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <canvas id="hero-bg-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <h1 class="hero-title">
+          <span class="gradient-text">Your AI Coach is Here</span>
+        </h1>
+        <p class="hero-subtext">
+          Upload your game. Joga watches. You level up.
+        </p>
+        <a href="#waitlist" class="cta-btn">Join the Beta</a>
+      </div>
+    </section>
+
+    <!-- About Joga AI Section -->
+    <section class="about-joga section-animate" id="about-joga">
+      <canvas
+        class="section-bg-canvas"
+        id="about-joga-canvas"
+        aria-hidden="true"
+      ></canvas>
+      <div class="container about-joga-content">
+        <div class="about-joga-text">
+          <h2 class="section-title">What is Joga AI?</h2>
+          <p class="section-subtitle">
+            Joga AI is your personal AI soccer coach. Upload your game footage
+            and Joga gives you instant coaching feedback — ratings, breakdowns,
+            and real analysis. No more guessing what you did wrong. No more
+            waiting for coaches. Just you, your game, and smarter ways to
+            improve.
+          </p>
+        </div>
+        <div class="about-joga-visual">
+          <img
+            src="https://images.unsplash.com/photo-1517747614396-d21a78b850e8?q=80&w=1827&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Soccer player analysis illustration"
+            class="about-joga-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Key Features Section -->
+    <section class="features-section section-animate" id="features">
+      <div class="container">
+        <h2 class="section-title text-center">Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-title">Pass Detection</div>
+            <div class="feature-desc">
+              Automatically detects and analyzes your passes for accuracy and
+              timing.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">Event Recognition</div>
+            <div class="feature-desc">
+              Identifies key moments like goals, tackles, and assists in your
+              gameplay.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⭐</div>
+            <div class="feature-title">Ratings System</div>
+            <div class="feature-desc">
+              Get a performance score after every game, just like the pros.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <div class="feature-title">Context Feedback</div>
+            <div class="feature-desc">
+              Personalized, actionable advice based on your unique play style.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">More Coming Soon</div>
+            <div class="feature-desc">
+              We’re always adding new features to help you level up your game.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section-animate" id="how">
+      <div class="container">
+        <h2 class="section-title text-center">How It Works</h2>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="how-step-icon">📤</div>
+            <h3 class="how-step-title">Upload Your Game</h3>
+            <p class="how-step-desc">
+              Send us your soccer clips from any device. No fancy camera needed.
+            </p>
+          </div>
+          <div class="how-step-arrow">→</div>
+          <div class="how-step">
+            <div class="how-step-icon">🤖</div>
+            <h3 class="how-step-title">AI Analyzes It</h3>
+            <p class="how-step-desc">
+              Our AI watches your gameplay, detects key events, and understands
+              your performance.
+            </p>
+          </div>
+          <div class="how-step-arrow">→</div>
+          <div class="how-step">
+            <div class="how-step-icon">💡</div>
+            <h3 class="how-step-title">Get Feedback</h3>
+            <p class="how-step-desc">
+              Receive instant, actionable feedback and ratings—just like a real
+              coach.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why It’s Different Section -->
+    <section class="comparison-section section-animate" id="comparison">
+      <div class="container">
+        <h2 class="section-title text-center">Why It’s Different</h2>
+        <p class="section-subtitle text-center">
+          See how Joga AI compares to other video analysis tools.
+        </p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Joga AI</th>
+              <th>Trace</th>
+              <th>Veo</th>
+              <th>Hudl</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Personalized Player Feedback</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>Instant Ratings & Coaching</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>No Special Hardware Needed</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>Works with Any Uploaded Video</td>
+              <td>✅</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td>❌</td>
+            </tr>
+            <tr>
+              <td>Built for Individuals</td>
+              <td>✅</td>
+              <td>❌ (Team Focused)</td>
+              <td>❌ (Team Focused)</td>
+              <td>❌ (Team Focused)</td>
+            </tr>
+            <tr>
+              <td>Setup Required</td>
+              <td>None</td>
+              <td>Special Camera</td>
+              <td>Special Camera</td>
+              <td>Team Upload</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- See Joga AI in Action Section -->
+    <section class="social-proof-section section-animate" id="social">
+      <div class="container">
+        <h2 class="section-title text-center">See Joga AI in Action</h2>
+        <p class="section-subtitle text-center">
+          Watch our latest YouTube Shorts and Instagram Reels, and hear what
+          early users are saying!
+        </p>
+        <div class="social-embeds">
+          <!-- YouTube Short Embed Example -->
+          <div class="social-embed">
+            <iframe
+              width="100%"
+              height="560"
+              style="overflow: hidden"
+              src="https://youtube.com/embed/CpMrpc59mD0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <!-- YouTube Short Embed Example -->
+          <div class="social-embed">
+            <iframe
+              width="100%"
+              height="560"
+              src="https://youtube.com/embed/SjxooYy-NTs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="testimonials">
+          <div class="testimonial-card">
+            “Joga AI gave me feedback I never got from my real coach. I improved
+            my passing in just two weeks!”
+            <div class="testimonial-author">— Alex, U16 Player</div>
+          </div>
+          <div class="testimonial-card">
+            “Super easy to use and the ratings are so motivating. Can’t wait for
+            the full launch!”
+            <div class="testimonial-author">
+              — Jamie, High School Midfielder
+            </div>
+          </div>
+          <div class="testimonial-card">
+            “Love how it works with any video. My whole team is signing up for
+            the beta.”
+            <div class="testimonial-author">— Taylor, Club Captain</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-animate" id="about">
+      <canvas
+        class="section-bg-canvas"
+        id="about-story-canvas"
+        aria-hidden="true"
+      ></canvas>
+      <div class="container">
+        <h2 class="section-title text-center">Our Story</h2>
+        <div class="about-story-content">
+          <div class="about-story-text">
+            <h3>Built by Students Who Love the Game</h3>
+            <p>
+              Joga AI was started by two high school soccer players with a
+              shared dream — to give every kid the chance to improve their game,
+              no matter where they come from. What began as an idea between
+              friends became a mission: build an AI coach that feels personal,
+              helpful, and always available.
+            </p>
+            <p>
+              We’re not a big company — just a couple of students building
+              something we wish we had growing up. We love soccer, we love tech,
+              and we believe in making coaching more accessible for everyone.
+              Every step of our journey is documented on
+              <a
+                href="https://www.youtube.com/@Joga.AI1/shorts"
+                target="_blank"
+                rel="noopener"
+                class="about-link"
+                >YouTube</a
+              >
+              the highs, the lows, and all the progress in between. Come follow
+              the build and be part of something real.
+            </p>
+          </div>
+          <div class="about-story-visual">
+            <img
+              src="./images/about.png"
+              alt="Joga AI team working"
+              class="about-story-img"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="waitlist-section" id="waitlist">
+      <div class="container">
+        <h2 class="section-title text-center">Join the Waitlist</h2>
+        <p class="section-subtitle text-center">
+          Be the first to try Joga AI. Enter your email to get early access and
+          updates!
+        </p>
+        <form class="waitlist-form" id="waitlistForm">
+          <input
+            type="email"
+            name="emailAddress"
+            id="emailInput"
+            placeholder="Your email address"
+            required
+            aria-label="Email address"
+          />
+          <!-- Honeypot field (invisible to users) -->
+          <input
+            type="text"
+            name="website"
+            style="display: none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+          <button type="submit" class="cta-btn">Join Waitlist</button>
+        </form>
+        <div
+          id="waitlistMessage"
+          class="text-center"
+          style="
+            display: none;
+            margin-top: 1rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+          "
+        >
+          <small style="color: green; font-weight: 500">
+            ✅ You're officially on the waitlist! We'll keep you updated ✉️
+          </small>
+        </div>
+        <div class="waitlist-privacy text-center">
+          <small>We respect your privacy. No spam, ever.</small>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const form = document.getElementById("waitlistForm");
+      const message = document.getElementById("waitlistMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // 🛡️ Honeypot field (anti-bot check)
+        const botField = document.querySelector('input[name="website"]');
+        if (botField.value !== "") return; // Detected as bot
+
+        const email = document.getElementById("emailInput").value;
+
+        const formUrl =
+          "https://docs.google.com/forms/d/e/1FAIpQLSdwdF7EQZjxYF5ZHF9Id-vUFv6bp3m8_xRnaMpyF6V0X2ptgw/formResponse";
+
+        const formData = new FormData();
+        formData.append("emailAddress", email);
+
+        fetch(formUrl, {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }).then(() => {
+          form.reset();
+          // ✅ Show animated message
+          message.style.display = "block";
+          setTimeout(() => {
+            message.style.opacity = 1;
+          }, 50);
+        });
+      });
+    </script>
+
+    <footer class="footer">
+      <div class="container">
+        <span
+          >&copy; 2025 Joga AI. Built with ❤️ by young founders. All rights
+          reserved.</span
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="JS/Animation.js"></script>
+  <script src="JS/Navbar.js"></script>
+  <script src="JS/SectionReveal.js"></script>
+</html>
