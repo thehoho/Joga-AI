@@ -96,32 +96,29 @@ body.dark .about-story-content,
 body.dark .how-step,
 body.dark .social-embed {
   background: var(--surface-alt) !important;
+  color: var(--text);
 }
 
 body.dark .feature-icon,
 body.dark .testimonial-author,
 body.dark .how-step-icon,
 body.dark .about-link {
-  color: var(--accent);
-  filter: drop-shadow(0 0 8px var(--accent));
+  color: var(--secondary);
+  filter: drop-shadow(0 0 8px var(--secondary));
 }
 
 body.dark .cta-btn {
-  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-  color: #fff;
+  background: var(--secondary);
+  color: #000;
   box-shadow: 0 2px 12px rgba(64, 196, 255, 0.18);
   border-radius: 2rem;
   border: none;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
-body.dark .cta-btn::after {
-  background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
-}
-
 body.dark .cta-btn:hover {
   box-shadow: 0 4px 24px rgba(0, 230, 118, 0.22);
-  background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+  background: var(--primary);
 }
 
 body.dark .nav-links a {
@@ -237,7 +234,7 @@ body.dark .nav-links a:hover {
 }
 
 body.dark .nav-cta {
-  background: var(--surface);
+  background: var(--secondary);
   border-radius: 1.5rem;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(64, 196, 255, 0.1);
@@ -259,4 +256,9 @@ body.dark .logo {
     filter: drop-shadow(0 0 10px var(--primary))
       drop-shadow(0 0 20px var(--accent));
   }
+}
+
+body.dark .about-story-text h3{
+  color: var(--primary);
+  text-shadow: 0 2px 16px rgba(0, 230, 118, 0.08);
 }
