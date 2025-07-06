@@ -96,7 +96,6 @@ body.dark .about-story-content,
 body.dark .how-step,
 body.dark .social-embed {
   background: var(--surface-alt) !important;
-  box-shadow: var(--shadow);
 }
 
 body.dark .feature-icon,
